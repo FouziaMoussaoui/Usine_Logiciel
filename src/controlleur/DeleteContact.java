@@ -8,23 +8,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import DAO.ContactDAO;
 
-/**
- * Servlet implementation class AddContact
- */
-public class AddContact extends HttpServlet {
+public class DeleteContact extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
 
+
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nom = request.getParameter("nom");
-		String prenom = request.getParameter("prenom");
-		String num_tel = request.getParameter("num_tel");
-		String type_tel= request.getParameter("type_tel");
-		int id_categorie= Integer.parseInt(request.getParameter("categorie"));
-
-
+int IdContact =Integer.parseInt(request.getParameter("IdContact"));
 		try{
 		
 			 ContactDAO p = new ContactDAO();
-	           p.addContact(nom,prenom,num_tel,type_tel,id_categorie);
+	           p.DeleteContact(IdContact);
 	           response.sendRedirect("ListContact.jsp");
 		}catch(Exception e)
 		{
@@ -32,9 +27,8 @@ public class AddContact extends HttpServlet {
 			}
 
 	}
-
 	
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

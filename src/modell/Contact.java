@@ -1,17 +1,19 @@
 package modell;
 
 public class Contact {
-	String nom,prenom,num_tel,type_tel,categorie;
-	public String getCategorie() {
-		return categorie;
-	}
+	private String nom,prenom,num_tel,type_tel;
+	private int id_categorie;
 
-	public void setCategorie(String categorie) {
-		this.categorie = categorie;
-	}
-
-	int id_contact;
+	private int id_contact;
 	
+
+	public int getId_categorie() {
+		return id_categorie;
+	}
+
+	public void setId_categorie(int id_categorie) {
+		this.id_categorie = id_categorie;
+	}
 
 	public int getId_contact() {
 		return id_contact;

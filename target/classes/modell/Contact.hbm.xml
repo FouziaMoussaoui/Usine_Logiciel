@@ -21,8 +21,8 @@
             <column name="TYPE_TEL" />
         </property>
         
-          <property name="categorie" type="java.lang.String">
-            <column name="CATEGORIE" />
+          <property name="id_categorie" type="java.lang.Integer">
+            <column name="ID_CATEGORIE" />
         </property>
     </class>
 </hibernate-mapping>
