@@ -1,16 +1,19 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.util.*,modell.Categorie"%>
+
+
 <jsp:include page="Header.jsp"/>
 
-	<h1 class="text-center" ><img class="img-circle" src="add.jpg" height="100" width="100">Créer un nouveau contact!</h1>
+	<h1 class="text-center" ><img class="img-circle" src="add.jpg" height="100" width="100">Modifier le contact!</h1>
 	<br><br><br>
 	<div>
 	
 	<!-- Form to add information in the new project -->
 	
 		<form class="col-lg-offset-3 col-sm-6" method="post"
-			action="AddContact">
+			action="UpdateContact">
+			<input name="idContact" type="hidden" value="<%=request.getParameter("IdContact") %>">
 			<div class="form-group">
 				<label class="control-label">Nom : </label> <input
 					type="text" class="form-control" name="nom">
@@ -50,7 +53,7 @@
 					</select>
 			</div>
 		
-			<button class="pull-right btn btn-success glyphicon glyphicon-plus"> Créer</button>
+			<button class="pull-right btn btn-success"> Modifier</button>
 		</form>
 	</div>
 	

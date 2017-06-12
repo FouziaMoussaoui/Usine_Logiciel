@@ -34,7 +34,6 @@
 
 
 	</script>
-	
 	<style>
 
 
@@ -49,8 +48,7 @@ background-image: url("bg_.jpg")  ;
 
 </style>
 <body class="container">
-	<h1 class="text-center"><img class="img-circle" src="admin.png" height="100" width="100">La liste de Mes
-		Contacts</h1>
+	<h1 class="text-center"><img class="img-circle" src="admin.png" height="100" width="100">Categorie:<%=request.getParameter("NomCategorie") %></h1>
 	<br>
 	<br>
 	<br>
@@ -73,8 +71,9 @@ background-image: url("bg_.jpg")  ;
 			<tbody>
 			<%
 			DAO.ContactDAO l1 = new DAO.ContactDAO();
+			int id_categorie=Integer.parseInt(request.getParameter("IdCategorie"));
 
-				List data1 = l1.List_of_Contact();
+				List data1 = l1.List_Par_Categorie(id_categorie);
 
 				Iterator it1 = data1.listIterator();
 				

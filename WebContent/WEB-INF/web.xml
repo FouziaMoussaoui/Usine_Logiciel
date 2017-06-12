@@ -14,4 +14,34 @@
     <servlet-name>AddContact</servlet-name>
     <url-pattern>/AddContact</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCategorie</display-name>
+    <servlet-name>AddCategorie</servlet-name>
+    <servlet-class>controlleur.AddCategorie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCategorie</servlet-name>
+    <url-pattern>/AddCategorie</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteContact</display-name>
+    <servlet-name>DeleteContact</servlet-name>
+    <servlet-class>controlleur.DeleteContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteContact</servlet-name>
+    <url-pattern>/DeleteContact</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateContact</display-name>
+    <servlet-name>UpdateContact</servlet-name>
+    <servlet-class>controlleur.UpdateContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateContact</servlet-name>
+    <url-pattern>/UpdateContact</url-pattern>
+  </servlet-mapping>
 </web-app>
