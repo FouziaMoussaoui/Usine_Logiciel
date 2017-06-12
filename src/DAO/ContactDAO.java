@@ -15,6 +15,30 @@ import modell.Contact;
 
 
 public class ContactDAO {
+	
+	
+	/**Methode de teste**/
+	public Boolean isExist(Object nom){
+		// 1. configuring hibernate
+					Configuration configuration = new Configuration().configure();
+
+					// 2. create sessionfactory
+					SessionFactory sessionFactory = configuration.buildSessionFactory();
+					 // 3. Get Session objects
+					Session session = sessionFactory.openSession();
+					List data = null;
+					try {
+					
+						org.hibernate.query.Query query = session.createQuery("from Contact where nom= :nom");
+                        query.setParameter("nom",nom ); 
+						data = query.list();
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+
+					}
+					if(data!=null) return true;
+					else return false;
+	}
 		/** Add Contact
 		 * @param categorie **/
 		public void addContact(String nom,String prenom,String num_tel,String type_tel, int id_categorie) {
